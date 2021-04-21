@@ -10,7 +10,7 @@ def steg_encode(image_path):
     msg = '' #message string
 
     #read lines of file into msg variable to pass to steg encoding
-    with open('/Users/erik/Documents/Projects/Python/securityResearch/stego_programs/text.txt', 'rt') as f:
+    with open('.txt', 'rt') as f: #add full path to .txt file with message to encode here
         for line in f.readlines():
             msg += line
 
@@ -43,4 +43,4 @@ def steg_encode(image_path):
 
     cv2.imwrite(image_path, image) #writes encoded image back over the original
 
-steg_encode('/Users/erik/Documents/Projects/Python/securityResearch/stego_programs/Ramen.png')
+steg_encode('.png') #add full path to target image file for encoding here
